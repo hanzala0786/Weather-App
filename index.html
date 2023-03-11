@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="assets/fevicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- heading -->
+        <h1>Weather App</h1>
+
+        <!-- switch tab -->
+        <div class="tab-container">
+            <p class="tab" data_yourWeather>Your Weather</p>
+            <p class="tab" data_searchWeather>Search Weather</p>
+        </div>
+
+        <!-- weatherInfo Container -->
+        <div class="weather-info-container common-property">
+            <!-- grant Access container -->
+            <div class="grant-access-container common-property">
+                <img src="./assets/location.png" width="80px" height="80px" loading="lazy">
+                <h2>Grant Location Access</h2>
+                <p>Allow access to get weather information</p>
+                <button class="grant-btn btn">Grant Access</button>
+            </div>
+            <!-- search tab container -->
+                <form class="search-form">
+                    <input type="text" placeholder="Searcg for city..." data_searchInput>
+                    <button class="search-btn btn" type="submit">
+                        <img src="assets/search.png" alt="" width="20px" height="20px">
+                    </button>
+                </form>
+
+            <!-- loading screan -->
+            <div class="loading">
+                <img src="./assets/loading.gif" alt="" width="120px" height="120px">
+                <p>Loading...</p>
+            </div>
+
+            <!-- your weather container -->
+            <div class="your-weather-container common-property"> 
+                <div class="name">
+                    <p data_cityName></p>
+                    <img data_countryFlag>
+                </div>
+                <!-- weather description -->
+                <p data_weatherDesc></p>
+                <!-- description image -->
+                <img data_weatherIcon>
+                <!-- temperature -->
+                <p data_temp></p>
+                <!-- Other information container -->
+                <div class="other-info-container">
+                    <div class="box">
+                        <img src="./assets/wind.png" alt="" width="30px" height="30px" loading="lazy">
+                        <p>WINDSPEED</p>
+                        <p data_windSpeed></p>
+                    </div>
+                    <div class="box">
+                        <img src="./assets/humidity.png" alt="" width="30px" height="30px" loading="lazy">
+                        <p>HUMIDITY</p>
+                        <p data_humidity></p>
+                    </div>
+                    <div class="box">
+                        <img src="./assets/wind.png" alt="" width="30px" height="30px" loading="lazy">
+                        <p>CLOUD</p>
+                        <p data_clouds></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
